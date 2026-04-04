@@ -6,7 +6,7 @@ interface Swatch {
 
 export const PaletteRow: React.FC<{ swatches: Swatch[]; onCopy?: (color: string) => void }> = ({ swatches, onCopy }) => (
     <div className="palette-row">
-        {swatches.map((swatch, i) => (
+        {swatches.map((swatch) => (
             <div
                 key={swatch.color}
                 className="swatch"
