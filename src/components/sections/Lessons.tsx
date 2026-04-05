@@ -29,7 +29,7 @@ export const Lessons: React.FC = () => {
       if (swatch) {
         const hex = swatch.textContent;
         if (hex) {
-          navigator.clipboard.writeText(hex).catch(() => {});
+          navigator.clipboard.writeText(hex).catch(() => { });
           const msg = document.getElementById('copy-msg');
           if (msg) {
             msg.textContent = '✓ Copied ' + hex;
@@ -38,16 +38,15 @@ export const Lessons: React.FC = () => {
           }
         }
       }
-      
+
       const printBtn = target.closest('.print-btn');
       if (printBtn) {
-          window.print();
+        window.print();
       }
     };
     document.addEventListener('click', handleClick);
     return () => document.removeEventListener('click', handleClick);
   }, []);
-
   return (
     <section id="lessons">
       <SectionLabel>COURSE CONTENT</SectionLabel>
@@ -61,16 +60,16 @@ export const Lessons: React.FC = () => {
       </div>
 
       <div className={`lesson-panel ${activeLesson === 0 ? 'active' : ''}`}>
-        {activeLesson === 0 && <Lesson1 />}
+        {activeLesson === 0 && <Lesson1 key={0} />}
       </div>
       <div className={`lesson-panel ${activeLesson === 1 ? 'active' : ''}`}>
-        {activeLesson === 1 && <Lesson2 />}
+        {activeLesson === 1 && <Lesson2 key={1} />}
       </div>
       <div className={`lesson-panel ${activeLesson === 2 ? 'active' : ''}`}>
-        {activeLesson === 2 && <Lesson3 />}
+        {activeLesson === 2 && <Lesson3 key={2} />}
       </div>
       <div className={`lesson-panel ${activeLesson === 3 ? 'active' : ''}`}>
-        {activeLesson === 3 && <Lesson4 />}
+        {activeLesson === 3 && <Lesson4 key={3} />}
       </div>
     </section>
   );

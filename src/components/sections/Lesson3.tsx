@@ -7,7 +7,7 @@ import React from 'react';
 
 export const Lesson3: React.FC = () => (
   <>
-    <div className="lesson-panel" id="panel-2">
+    <div id="panel-2">
       <div className="lesson-header l3-hd" data-emoji="🖼️">
         <div className="tag">PHOTOSHOP</div> <div className="tag">PHOTO-RICH DESIGN</div>
         <h2>Lesson 3 — Photo-Rich Infographics with Photoshop</h2>

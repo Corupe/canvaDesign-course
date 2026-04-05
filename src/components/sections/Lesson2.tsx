@@ -7,7 +7,7 @@ import React from 'react';
 
 export const Lesson2: React.FC = () => (
   <>
-    <div className="lesson-panel" id="panel-1">
+    <div className="" id="panel-1">
       <div className="lesson-header l2-hd" data-emoji="📊">
         <div className="tag">CANVA</div> <div className="tag">INFOGRAPHIC DESIGN</div>
         <h2>Lesson 2 — Infographic Storytelling with Canva</h2>

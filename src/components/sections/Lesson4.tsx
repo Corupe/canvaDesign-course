@@ -7,7 +7,7 @@ import React from 'react';
 
 export const Lesson4: React.FC = () => (
   <>
-    <div className="lesson-panel" id="panel-3">
+    <div id="panel-3">
       <div className="lesson-header l4-hd" data-emoji="✏️">
         <div className="tag">ILLUSTRATOR</div> <div className="tag">VECTOR MASTERY</div>
         <h2>Lesson 4 — Vector Infographics with Adobe Illustrator</h2>
