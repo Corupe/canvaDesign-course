@@ -13,7 +13,10 @@ const navItems = [
 
 export const Header: React.FC<HeaderProps> = ({ activeSection, onNav }) => (
     <header className="header">
-        <div className="logo"><span>Design</span> Course by Soufiane</div>
+        <div className="logo">
+            <img src="/evol-logo.svg" alt="EVOL" className="logo-img" />
+            <span>Commercial Design</span>
+        </div>
         <nav className="nav-pills">
             {navItems.map(item => (
                 <button

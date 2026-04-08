@@ -1,208 +1,206 @@
 import React from 'react';
 
-// const HomeworkCheck = () => {
-//     const [done, setDone] = React.useState(false);
-//     return <div className={`hw-check ${done ? 'done' : ''}`} onClick={() => setDone(!done)}></div>;
-// };
-
 export const Lesson2: React.FC = () => (
-  <>
-    <div className="" id="panel-1">
-      <div className="lesson-header l2-hd" data-emoji="📊">
-        <div className="tag">CANVA</div> <div className="tag">INFOGRAPHIC DESIGN</div>
-        <h2>Lesson 2 — Infographic Storytelling with Canva</h2>
-        <p>Move from design principles to full infographic creation. Learn how to transform raw data into a compelling visual narrative — with structure, hierarchy, and purpose — and build a complete infographic by the end of this lesson.</p>
-        <div className="lesson-meta">
-          <div className="meta-chip">⏱ 2.5–3 hrs</div>
-          <div className="meta-chip">🛠 Canva (free)</div>
-          <div className="meta-chip">📈 Data + Charts + Icons</div>
-          <div className="meta-chip">🖨️ 2 printables</div>
-        </div>
-      </div>
-
-      <div className="fun-fact">
-        <div className="ff-icon">🧠</div>
-        <div><strong>The neuroscience behind infographics:</strong> The human brain processes visuals <strong>60,000× faster</strong> than text, and <strong>65% of people</strong> are visual learners. But the real power isn't just that images are fast — it's that images trigger emotion, and emotion drives memory. A great infographic doesn't just inform; it makes people <em>feel</em> something about the data. That emotional response is what makes information stick.</div>
-      </div>
-
-      <div className="design-quote">
-        <blockquote>There are three responses to a piece of design — yes, no, and WOW. Wow is the one to aim for.</blockquote>
-        <cite>— Milton Glaser, designer (I ♥ NY logo, Dylan poster, New York Magazine co-founder)</cite>
-      </div>
-
-      <div className="content-grid">
-        <div className="card">
-          <h3>🎯 What You'll Learn</h3>
-          <ul className="obj-list">
-            <li><div className="obj-dot">✓</div>The 6 infographic types — how to choose the right format for your data</li>
-            <li><div className="obj-dot">✓</div>Narrative structure: how to build a visual story from hook to insight to action</li>
-            <li><div className="obj-dot">✓</div>The F-pattern and Z-pattern: design for how humans naturally read</li>
-            <li><div className="obj-dot">✓</div>Creating charts natively in Canva — bar, pie, line, area, donut</li>
-            <li><div className="obj-dot">✓</div>Icon strategy: selecting, scaling, and placing icons for maximum clarity</li>
-            <li><div className="obj-dot">✓</div>Grid systems for multi-section infographics</li>
-            <li><div className="obj-dot">✓</div>Exporting at the right resolution for web, print, and social media</li>
-          </ul>
-        </div>
-        <div className="card">
-          <h3>⏱ Lesson 2 Timeline</h3>
-          <ul className="timeline">
-            <li><span className="tl-time">0–20 min</span> Homework showcase: 3 minutes each — students walk through their Canva rebuild and what they discovered about layouts</li>
-            <li><span className="tl-time">20–50 min</span> Theory: The 6 infographic types, narrative structures, eye movement patterns</li>
-            <li><span className="tl-time">50–80 min</span> Live demo: Build a complete statistical infographic from scratch in real time — students follow along</li>
-            <li><span className="tl-time">80–130 min</span> Workshop: Each student builds their own infographic on an assigned or chosen dataset using their Brand Kit</li>
-            <li><span className="tl-time">130–160 min</span> Gallery walk: all designs displayed, sticky-note critique — one strength, one opportunity per design</li>
-            <li><span className="tl-time">160–175 min</span> Export formats walkthrough, homework brief, wrap-up</li>
-          </ul>
-        </div>
-      </div>
-
-      <div className="card card-wide" style={{ marginBottom: '22px' }}>
-        <h3>📊 The 6 Infographic Types — Expanded Guide</h3>
-
-        <div className="design-quote" style={{ marginBottom: '16px' }}>
-          <blockquote>Clutter and confusion are not attributes of information, they are failures of design.</blockquote>
-          <cite>— Edward Tufte, pioneer of data visualization ("The Visual Display of Quantitative Information")</cite>
-        </div>
-
-        <div className="accordion">
-          <div className="acc-header" >📋 Statistical — When numbers are your hero <span className="acc-arrow">▾</span></div>
-          <div className="acc-body">
-            <p><strong>Purpose:</strong> Present research findings, survey results, or data collections in a visually digestible form. The design's job is to make numbers feel significant and memorable, not just readable.</p>
-            <p><strong>Structure:</strong> Open with your single most impactful statistic (large, bold, centered — your "hero number"). Follow with 3–5 supporting statistics in a visual grid. Use charts to show relationships or distributions. End with source citations in small type.</p>
-            <div className="example-box">
-              <div className="ex-label">📌 REAL EXAMPLE TO STUDY</div>
-              <strong>Pew Research Center</strong> publishes some of the most respected statistical infographics in journalism. Their signature move: one big percentage in 72pt+ bold at the top, a clean horizontal bar chart below, and minimal supporting text. The restraint makes each number feel trustworthy. Search "Pew Research infographic" for excellent examples.
+    <>
+        <div className="" id="panel-1">
+            <div className="lesson-header l2-hd" data-emoji="📧">
+                <div className="tag">CANVA</div> <div className="tag">COMMERCIAL DESIGN</div>
+                <h2>Lesson 2 — Commercial & Print Design with Canva</h2>
+                <p>Move from design principles to professional print design projects. Learn how to design branded marketing collateral that actually sells: packaging labels, direct mail, flyers, brochures, and promotional materials. By the end of this lesson, you'll create a complete branded marketing kit suitable for a real business.</p>
+                <div className="lesson-meta">
+                    <div className="meta-chip">⏱ 2.5–3 hrs</div>
+                    <div className="meta-chip">🛠 Canva (free + premium)</div>
+                    <div className="meta-chip">📦 8 Essential Formats</div>
+                    <div className="meta-chip">🖨️ 2 printables</div>
+                </div>
             </div>
-            <div className="example-box">
-              <div className="ex-label">🛠 CANVA TEMPLATE APPROACH</div>
-              Start with a 800×2000px canvas. Reserve the top 400px for your hero stat. Use a 2-column grid for the middle section (statistics + icons). Place a full-width chart at 60% height in the lower third. Keep the background white or near-white — let the color live in the data elements only.
+
+            <div className="fun-fact">
+                <div className="ff-icon">🧠</div>
+                <div><strong>The psychology of commercial design:</strong> A buyer has <strong>3-5 seconds</strong> to notice your product on a shelf or your flyer in a mailbox. Your design must communicate your entire brand value in that window. Studies show that <strong>95% of purchasing decisions are subconscious</strong> — driven by color, typography, and spatial arrangement rather than rational analysis. A great commercial design makes your audience <em>feel</em> that your product/service is valuable, trustworthy, and worth buying.</div>
             </div>
-          </div>
-        </div>
 
-        <div className="accordion">
-          <div className="acc-header" >🗺️ Process / Timeline — When sequence tells the story <span className="acc-arrow">▾</span></div>
-          <div className="acc-body">
-            <p><strong>Purpose:</strong> Show how something works, evolves, or happens in steps. The viewer's eye should move naturally from step 1 to step N — your layout enforces the sequence.</p>
-            <p><strong>Structure options:</strong> Vertical flow (steps cascade downward — classic for how-to guides). Horizontal timeline (great for historical progressions). Circular flow (works for ongoing cycles like seasons, business cycles, product development sprints). Stepped diagram (staircase visual showing progression or growth).</p>
-            <div className="example-box">
-              <div className="ex-label">📌 DESIGN DECISION</div>
-              Use connecting arrows or dotted lines sparingly — only when the sequence isn't obvious from layout alone. Numbered circles are the clearest way to show sequence. Color progression (lighter to darker, or one hue shifting through tints) reinforces the sense of movement through time.
+            <div className="design-quote">
+                <blockquote>Design is the silent ambassador of your brand.</blockquote>
+                <cite>— Paul Rand</cite>
             </div>
-            <div className="warning-box">
-              <div className="w-label">⚠️ COMMON MISTAKE</div>
-              Making all steps visually equal when some steps are more important than others. If Step 3 is the critical turning point, make its node larger, bolder, or a different color than the others. Hierarchy within a process diagram is just as important as overall hierarchy.
+
+            <div className="content-grid">
+                <div className="card">
+                    <h3>🎯 What You'll Learn</h3>
+                    <ul className="obj-list">
+                        <li><div className="obj-dot">✓</div>The 8 essential commercial/print design formats — packaging, direct mail, flyers, brochures, and more</li>
+                        <li><div className="obj-dot">✓</div>Brand system design: creating cohesive visual identity across multiple pieces</li>
+                        <li><div className="obj-dot">✓</div>Persuasion design principles specific to commercial contexts</li>
+                        <li><div className="obj-dot">✓</div>Creating print-ready files: bleeds, margins, color modes, font embedding</li>
+                        <li><div className="obj-dot">✓</div>Layout strategies for different fold types (tri-fold, bi-fold, accordion)</li>
+                        <li><div className="obj-dot">✓</div>Direct mail psychology: what makes people open, read, and respond</li>
+                        <li><div className="obj-dot">✓</div>Professional export settings for commercial printers</li>
+                    </ul>
+                </div>
+
             </div>
-          </div>
-        </div>
 
-        <div className="accordion">
-          <div className="acc-header" >⚖️ Comparison — When contrast reveals truth <span className="acc-arrow">▾</span></div>
-          <div className="acc-body">
-            <p><strong>Purpose:</strong> Place two or more options side by side so differences and similarities become immediately visible. The design should make the comparison feel effortless — the viewer should understand "A vs B" before they read a single word.</p>
-            <p><strong>Key design rules:</strong> Use a clear vertical divider or enough white space to separate the two sides. Use opposing colors — one warm, one cool, or one dark and one light. Mirror the layout on both sides so the visual structure itself creates the comparison. Tables are a form of comparison infographic — make sure your column headers are bold and clearly labeled.</p>
-            <div className="example-box">
-              <div className="ex-label">📌 EXAMPLE USE CASES</div>
-              Free vs Paid tiers (SaaS companies use these constantly). Before vs After (fitness, renovation, design). Country A vs Country B. Traditional vs Modern methods. Product A vs Product B features. This vs That — any binary choice benefits from a comparison infographic.
+            <div className="card card-wide" style={{ marginBottom: '22px' }}>
+                <h3>📦 The 8 Essential Commercial/Print Formats</h3>
+
+                <div className="design-quote" style={{ marginBottom: '16px' }}>
+                    <blockquote>Everything you need to know about your brand should be contained in your collateral.</blockquote>
+                    <cite>— Michael Bierut</cite>
+                </div>
+
+                <div className="accordion">
+                    <div className="acc-header" >📦 Packaging & Labels — When first impression must convert <span className="acc-arrow">▾</span></div>
+                    <div className="acc-body">
+                        <p><strong>Purpose:</strong> Your packaging is a silent salesman at the retail shelf. Before any copy is read, the visual system must communicate: premium or value? Trustworthy or trendy? Your design determines shelf-stop in 2-3 seconds.</p>
+                        <p><strong>Design Priorities:</strong> (1) Shelf impact — Color, contrast, distinctive shape (2) Brand clarity — Logo, brand name immediately recognizable (3) Key information hierarchy — Hero benefit first (4) Emotional resonance — Does this make the target customer feel like it's for them?</p>
+                        <div className="example-box">
+                            <div className="ex-label">✅ EFFECTIVE DESIGN</div>
+                            Premium coffee package: minimalist matte black box, single color brand name in elegant serif (36pt), single line describing origin in clean sans-serif (14pt). White space dominates. The design screams "I'm expensive and worth it" before you even read the copy.
+                        </div>
+                        <div className="example-box">
+                            <div className="ex-label">❌ INEFFECTIVE DESIGN</div>
+                            Generic coffee package: color photo of beans covering 80% of space, cluttered text in 3 different fonts everywhere, "PREMIUM QUALITY" and "ORGANIC" competing for space. Visual chaos undermines any legitimate quality claims.
+                        </div>
+                    </div>
+                </div>
+
+                <div className="accordion">
+                    <div className="acc-header" >📧 Direct Mail — When breaking through inbox clutter <span className="acc-arrow">▾</span></div>
+                    <div className="acc-body">
+                        <p><strong>Purpose:</strong> A direct mail piece arrives in a physical mailbox when digital defenses are down. You have maybe 5 seconds before recipient decides to trash it or open it. Design must immediately communicate: this is relevant to me, this offers value, this requires my response.</p>
+                        <p><strong>Direct Mail Psychology:</strong> The envelope is everything — if it doesn't stop the recipient, the content inside is never read. Personalization like "Dear [Name]" increases response by 40%+. A clear call-to-action drives response.</p>
+                        <div className="example-box">
+                            <div className="ex-label">✅ EFFECTIVE DESIGN</div>
+                            Real estate mailer with eye-catching golden-yellow envelope, teaser "We Sold Your Neighbor's House For $500K More" (creates curiosity), interior letter with agent's personal photo and story, pre-addressed response card. Recipient must open to learn more.
+                        </div>
+                        <div className="example-box">
+                            <div className="ex-label">❌ INEFFECTIVE DESIGN</div>
+                            Generic real estate postcard with small property photo, dense text in tiny font, hard-to-read CTA at bottom, no personalization, generic design identical to 20 other mailers hitting the same mailbox.
+                        </div>
+                    </div>
+                </div>
+
+                <div className="accordion">
+                    <div className="acc-header" >📄 Flyers & Posters — When bold visual communication is required <span className="acc-arrow">▾</span></div>
+                    <div className="acc-body">
+                        <p><strong>Purpose:</strong> Flyers and posters must communicate instantly and memorably. Duration of attention: 3-10 seconds maximum. Your message must be understood in that window or the design failed.</p>
+                        <p><strong>The Hierarchy:</strong> (1) Hero Visual (60% of attention) — Photo or compelling graphic (2) Main Headline (25%) — Event name or primary message (3) Key Details (10%) — Date, time, location (4) Call-to-Action (5%) — Website, phone, or QR code.</p>
+                        <div className="example-box">
+                            <div className="ex-label">✅ EFFECTIVE DESIGN</div>
+                            Concert poster: large performer photo (40% of space), bold event name in 80pt font overlaid with subtle transparent background for legibility, date/time/venue in organized block at bottom, ticket URL as clear CTA. Takes 4 seconds to understand completely.
+                        </div>
+                        <div className="example-box">
+                            <div className="ex-label">❌ INEFFECTIVE DESIGN</div>
+                            Concert poster: tiny performer photo in corner, event name in 14pt font drowned in text, dates in multiple locations, no clear CTA, design looks assembled rather than designed.
+                        </div>
+                    </div>
+                </div>
+
+                <div className="accordion">
+                    <div className="acc-header" >📋 Brochures — When storytelling requires multiple pages <span className="acc-arrow">▾</span></div>
+                    <div className="acc-body">
+                        <p><strong>Purpose:</strong> Brochures provide room for a complete narrative: company story, product features, testimonials, CTA. Unlike a flyer, brochures are folds that guide the reader through a journey.</p>
+                        <p><strong>Fold Types:</strong> Tri-fold (most common — each panel is 3.67" wide). Bi-fold (panels are 5.5" wide). Accordion fold (all panels visible when fully opened). Each requires different design strategy for reading flow.</p>
+                        <div className="example-box">
+                            <div className="ex-label">✅ EFFECTIVE DESIGN</div>
+                            Premium real estate tri-fold: front features stunning property photography (full-bleed), elegant company name. Inside panels organized on 3-column grid: agent bio with headshot (left), property details in organized list (center), luxury imagery (right). Everything aligns to grid.
+                        </div>
+                        <div className="example-box">
+                            <div className="ex-label">❌ INEFFECTIVE DESIGN</div>
+                            Generic real estate tri-fold: front has small image in corner with dense text everywhere, no grid organization, contact info scattered in multiple locations, no clear hierarchy.
+                        </div>
+                    </div>
+                </div>
+
+                <div className="accordion">
+                    <div className="acc-header" >💼 Business Collateral — The identity system <span className="acc-arrow">▾</span></div>
+                    <div className="acc-body">
+                        <p><strong>Purpose:</strong> Business cards, letterhead, envelopes, and labels work together to create cohesive brand identity. Each touchpoint reinforces the brand message and builds recognition.</p>
+                        <p><strong>The Collateral Set:</strong> Business cards (3.5" × 2"), Letterhead (8.5" × 11"), Envelopes (#10 standard), Promotional labels for shipping/products. All pieces should align to the same grid system and use consistent Brand Kit.</p>
+                        <div className="example-box">
+                            <div className="ex-label">✅ EFFECTIVE DESIGN</div>
+                            Law firm collateral: minimalist design with deep navy primary color, elegant serif font for name, clean sans-serif for supporting info. Business card, letterhead, and envelope all use same color palette, font hierarchy, and logo placement. Receiving a letter immediately communicates "professional and established."
+                        </div>
+                        <div className="example-box">
+                            <div className="ex-label">❌ INEFFECTIVE DESIGN</div>
+                            Same firm's collateral: business card uses large colorful logo and playful font, letterhead uses corporate serif and different color, envelope in yet another color scheme. Each piece feels disconnected.
+                        </div>
+                    </div>
+                </div>
+
+                <div className="accordion">
+                    <div className="acc-header" >🎯 Sales Materials & Promotional Items <span className="acc-arrow">▾</span></div>
+                    <div className="acc-body">
+                        <p><strong>Purpose:</strong> Promotional items (branded t-shirts, mugs, stickers, notebooks) extend brand presence into daily life. They're walking advertisements when customers carry, display, or wear them.</p>
+                        <p><strong>Key Design Considerations:</strong> Fabric as canvas — light garment allows full color, dark garment requires white/light designs. Size constraints — embroidered logos on caps must be 2-3 inches maximum. Durability — dark-background print items require special printing.</p>
+                        <div className="example-box">
+                            <div className="ex-label">📌 COMMERCIAL USE CASES</div>
+                            Branded apparel for employees, die-cut vinyl stickers for laptops/water bottles, print-on-demand items (mugs, hoodies, notebooks), event giveaways (pens, notepads, keychains), direct mail premiums to increase response rate.
+                        </div>
+                    </div>
+                </div>
+
             </div>
-          </div>
-        </div>
 
-        <div className="accordion">
-          <div className="acc-header" >📍 Geographic — When location is the data <span className="acc-arrow">▾</span></div>
-          <div className="acc-body">
-            <p><strong>Purpose:</strong> Show how data varies across locations — countries, cities, regions, zip codes. Maps make spatial relationships and regional disparities immediately visible in a way tables never could.</p>
-            <p><strong>Design approaches:</strong> <strong>Choropleth maps</strong> — shade regions in proportion to their data value (darker = higher). <strong>Bubble maps</strong> — overlay circles sized proportionally to the data value on map locations. <strong>Dot density maps</strong> — scatter individual dots to show distribution intensity. In Canva, use free map illustrations and manually apply color fills per region.</p>
-            <div className="example-box">
-              <div className="ex-label">🛠 FREE RESOURCES FOR MAPS</div>
-              Datawrapper.de — free interactive map creator, exportable as image. Flourish.studio — beautiful map templates, free tier. Wikipedia SVG maps — free, editable vector maps for every country and region. Search "svg world map blank" for clean starting points you can customize in Canva or Illustrator.
+            <div className="card card-wide" style={{ marginBottom: '22px' }}>
+                <h3>🛠️ The Commercial Design Workflow — 6 Steps to Professional Results</h3>
+                <ul className="step-list">
+                    <li><strong>Discovery & Briefing:</strong> What is the message? Who is the target audience? What feeling should the design evoke? What action do you want them to take? What's the budget and timeline?</li>
+                    <li><strong>Research & Reference:</strong> Look at 10-15 examples of similar designs. Identify common patterns and what makes top examples memorable. Note color palettes, typography, hierarchy approaches.</li>
+                    <li><strong>Sketch & Wireframe:</strong> Rough pencil sketches of layout ideas. Wireframe showing text placement, image placement, visual flow. Don't elaborate — rough is fine.</li>
+                    <li><strong>Digital Execution:</strong> Build in Canva (for simple designs), Photoshop (photo-heavy), or Illustrator (vector-based). Apply all design principles: contrast, hierarchy, alignment, proximity, color harmony.</li>
+                    <li><strong>Review & Refinement:</strong> Does it communicate the message clearly? Will it stand out among competitors? Does it reflect the brand properly? Does it drive the intended action?</li>
+                    <li><strong>Export & Production:</strong> Export at correct settings for production method. Review print proof before full run. Have a backup plan if first run has issues.</li>
+                </ul>
             </div>
-          </div>
-        </div>
 
-        <div className="accordion">
-          <div className="acc-header" >🔢 List / Informational — When structure creates clarity <span className="acc-arrow">▾</span></div>
-          <div className="acc-body">
-            <p><strong>Purpose:</strong> Present a collection of facts, tips, or items in a scannable visual format. Ideal for "Top 10" content, checklist-style guides, or quick-reference resources. This is the most shareworthy format on social media because it's immediately scannable.</p>
-            <p><strong>Design principle:</strong> Every item needs an icon, number, or visual element — not just text. The icon should relate to the content, not just be decorative. Use a consistent icon style (all line-art or all filled — never mix). Keep each item to one line of headline text if possible, with 2–3 lines of supporting text maximum.</p>
-            <div className="example-box">
-              <div className="ex-label">📌 WHY LISTS WORK ON SOCIAL MEDIA</div>
-              BuzzFeed's entire early model was built on list articles because numbered formats trigger a specific psychological response: the promise of a complete, bounded piece of information. "5 things" feels manageable. "7 tips" feels actionable. Visual list infographics convert this psychology into shareable content — readers save them as references.
+            <div className="printable-card">
+                <div className="print-badge">🖨️ PRINTABLE — COMMERCIAL DESIGN CHECKLIST</div>
+                <h3>📝 Before You Design — Discovery Questions</h3>
+                <p style={{ fontSize: '.82rem', color: '#666', marginBottom: '14px' }}>Complete these before opening Canva. Clear briefs produce better designs faster.</p>
+                <div className="cheat-grid">
+                    <div className="cheat-item"><div className="cheat-key">1. THE MESSAGE</div>Complete this sentence: "After seeing this design, my customer will understand that ___________________."</div>
+                    <div className="cheat-item"><div className="cheat-key">2. TARGET AUDIENCE</div>Age / expertise level / what they already know / what concerns them: ___________________</div>
+                    <div className="cheat-item"><div className="cheat-key">3. DESIRED FEELING</div>☐ Premium/Luxury  ☐ Trustworthy/Professional  ☐ Fun/Playful  ☐ Bold/Energetic  ☐ Calm/Minimal</div>
+                    <div className="cheat-item"><div className="cheat-key">4. PRIMARY ACTION</div>What do you want them to do? Buy? Call? Visit? Remember? ___________________</div>
+                    <div className="cheat-item"><div className="cheat-key">5. PRODUCTION METHOD</div>☐ Digital Print  ☐ Commercial Offset  ☐ Print-on-Demand  ☐ Web-Only  ☐ Combination</div>
+                    <div className="cheat-item"><div className="cheat-key">6. COLOR MOOD</div>☐ Bold/Energetic  ☐ Calm/Trust  ☐ Playful/Fun  ☐ Professional/Corporate  ☐ Dark/Premium</div>
+                    <div className="cheat-item"><div className="cheat-key">7. FORMAT & DIMENSIONS</div>What format? (Business card 3.5"×2", Flyer 8.5"×11", Brochure tri-fold, etc.) What's the viewing distance?</div>
+                    <div className="cheat-item"><div className="cheat-key">8. BUDGET & TIMELINE</div>Budget per piece printed: $___ · Timeline to first proof: ___ · Full run quantity: ___</div>
+                </div>
+                <button className="print-btn" >🖨️ Print discovery checklist</button>
             </div>
-          </div>
-        </div>
 
-        <div className="accordion">
-          <div className="acc-header" >🕸️ Hierarchical — When relationships are the message <span className="acc-arrow">▾</span></div>
-          <div className="acc-body">
-            <p><strong>Purpose:</strong> Show parent-child relationships, organizational structures, taxonomies, or decision trees. The visual structure itself communicates the logic — indentation, connections, branching all signal hierarchy.</p>
-            <p><strong>Types:</strong> <strong>Org charts</strong> — top-down authority structures. <strong>Tree diagrams</strong> — branching taxonomies (classification systems, evolutionary trees). <strong>Flowcharts</strong> — decision logic ("if this, then that"). <strong>Mind maps</strong> — radial idea branches from a central concept.</p>
-            <div className="example-box">
-              <div className="ex-label">🛠 DESIGN TIP FOR FLOWCHARTS</div>
-              Use consistent shape conventions: rectangles for process steps, diamonds for decisions (yes/no branches), ovals for start/end points. This is a universal visual language — anyone who has seen a flowchart will immediately understand your structure. Use color to differentiate branches, not just to decorate.
+            <div className="printable-card">
+                <div className="print-badge">🖨️ PRINTABLE — PRINT SPECIFICATIONS GUIDE</div>
+                <h3>📤 File Setup for Professional Printing</h3>
+                <div className="cheat-grid">
+                    <div className="cheat-item"><div className="cheat-key">RESOLUTION (DPI)</div>Web/Digital: 72–96 DPI · Small Print (postcard): 150 DPI · Standard Print (A4, poster): 300 DPI · Large Format (banner): 150 DPI at viewing distance</div>
+                    <div className="cheat-item"><div className="cheat-key">COLOR MODE</div>Always use CMYK for print (never RGB). RGB displays brighter than CMYK prints will produce. Specify Pantone colors for brand consistency in commercial printing.</div>
+                    <div className="cheat-item"><div className="cheat-key">BLEED & MARGINS</div>Bleed: 0.25" beyond cut line (for full-bleed designs). Safety margin: 0.5" inside edge (text won't get cut). Fold allowances: 1/8" for scoring areas.</div>
+                    <div className="cheat-item"><div className="cheat-key">STANDARD SIZES</div>Business card: 3.5" × 2" · Flyer: 8.5" × 11" · Postcard: 6" × 9" · Tri-fold brochure: 8.5" × 11" folded · Half-fold: 5.5" × 8.5"</div>
+                    <div className="cheat-item"><div className="cheat-key">FILES & FONTS</div>Embed all fonts or convert to outlines. Save as PDF Print (not PDF Standard). Include all linked images and color profiles. Include specs sheet with file explaining dimensions, bleeds, and color mode.</div>
+                    <div className="cheat-item"><div className="cheat-key">PROOFING</div>Always request a printed proof before full run. Color blindness in design can look good on screen but fail in print. Test at intended viewing distance.</div>
+                </div>
+                <button className="print-btn" >🖨️ Print specifications guide</button>
             </div>
-          </div>
+
+            <div className="case-study">
+                <div className="cs-label">📚 CASE STUDY — COMMERCIAL DESIGN DONE RIGHT</div>
+                <h4>How a small coffee roaster built brand through collateral design</h4>
+                <p>A local coffee roaster competed against national chains with bigger marketing budgets. Their advantage: deliberate, consistent brand system designed across all customer touchpoints.</p>
+                <p>They invested in custom packaging label design (professional designer, not DIY). That label appeared on bags sold at farmers markets. Those same design elements appeared on their business cards, stickers on cups, and direct mail to local businesses. Every piece reinforced the same color palette (navy + gold), typography (elegant serif), and mission statement.</p>
+                <div className="cs-takeaway"><strong>The takeaway for your work:</strong> Consistency builds brand recognition faster than novelty. Pick your design direction early, apply it rigorously across every piece, and customers will recognize you instantly. This brand identity is worth more than any individual ad campaign.</div>
+            </div>
+
+            <div className="homework">
+                <h3>🏠 At-Home Tasks — Due Before Lesson 3</h3>
+                <div className="hw-task"><div className="hw-check" ></div><div><strong>Task 1 — Commercial Kit Build (90 min):</strong> Choose a real or fictional local business. Design a complete branded marketing kit in Canva including: (1) tri-fold brochure (front, inside, back), (2) promotional flyer or postcard, (3) business card (front and back), (4) shipping label or product label. All pieces must use the same Brand Kit and coordinate visually. Export at correct dimensions for each format.</div></div>
+                <div className="hw-task"><div className="hw-check" ></div><div><strong>Task 2 — Print Production Study (30 min):</strong> Select one of your 3 pieces from Task 1. Research and document: Correct file setup (dimensions, DPI, bleed, color mode), local printing vendors and their price quotes for this specific item, what could go wrong in production and how to prevent it. Write a 1-page "Print Production Brief" explaining your file to a printer.</div></div>
+                <div className="hw-task"><div className="hw-check" ></div><div><strong>Task 3 — Direct Mail Analysis (45 min):</strong> Bring in 3 pieces of direct mail you actually received. For each, analyze: What stopped you from throwing it away? What visual hierarchy guided your eye? What was the CTA? Did it work? What would you change about the design?</div></div>
+                <div className="hw-task"><div className="hw-check" ></div><div><strong>Bonus 🌟 — Regional Rebrand:</strong> Find a local business with mediocre marketing materials. Redesign ONE of their pieces (menu, flyer, signage, business card, etc.). Present it to them. See if they'd use it. Real feedback from real stakeholders is invaluable.</div></div>
+            </div>
         </div>
-      </div>
-
-      <div className="card card-wide" style={{ marginBottom: '22px' }}>
-        <h3>📖 Building a Visual Narrative — The 5-Part Infographic Story</h3>
-        <p style={{ fontSize: '.87rem', color: '#555', lineHeight: '1.7', marginBottom: '16px' }}>Every great infographic tells a story. Even pure data visualizations have a beginning, middle, and end. Here is the proven narrative framework used by information designers at publications like The Economist, Bloomberg, and The Guardian:</p>
-        <ul className="step-list">
-          <li><strong>The Hook:</strong> Your title and a single "wow" statistic or visual that answers "why should I care about this?" before they've committed to reading. Make the first 10% of the infographic irresistible.</li>
-          <li><strong>The Context:</strong> A brief setup — who, what, when, where. Don't assume background knowledge. Two to three short sentences or a small contextual visual that grounds the reader in the subject.</li>
-          <li><strong>The Evidence:</strong> Your main data section. Present your statistics, charts, comparisons, or process steps. This is the longest section — it's where your data lives. Apply hierarchy rigorously: most important data gets most visual weight.</li>
-          <li><strong>The Insight:</strong> The "so what?" — a callout box, a bold conclusion sentence, or a highlighted finding that synthesizes all your data into one memorable takeaway. Many infographics skip this and leave the reader to draw their own conclusion. Don't. Tell them what the data means.</li>
-          <li><strong>The Source / CTA:</strong> Always credit your data sources in small text at the bottom. It builds credibility. If there's a next action (visit a website, share the infographic, use a product), place a clear but subtle call-to-action here.</li>
-        </ul>
-      </div>
-
-      <div className="printable-card">
-        <div className="print-badge">🖨️ PRINTABLE — FILL BEFORE YOU DESIGN</div>
-        <h3>📝 Infographic Pre-Design Planning Worksheet</h3>
-        <p style={{ fontSize: '.82rem', color: '#666', marginBottom: '14px' }}>Complete this on paper before opening Canva. Designers who plan first produce better work faster. Every field matters.</p>
-        <div className="cheat-grid">
-          <div className="cheat-item"><div className="cheat-key">1. THE SINGLE MESSAGE</div>Complete this sentence: "After seeing this infographic, my reader will understand that ___________________."</div>
-          <div className="cheat-item"><div className="cheat-key">2. WHO IS YOUR AUDIENCE?</div>Age / expertise level / what they already know / what they need to know: ___________________</div>
-          <div className="cheat-item"><div className="cheat-key">3. INFOGRAPHIC TYPE</div>☐ Statistical  ☐ Process/Timeline  ☐ Comparison  ☐ Geographic  ☐ List  ☐ Hierarchical. Why this type?:</div>
-          <div className="cheat-item"><div className="cheat-key">4. YOUR 3 HERO DATA POINTS</div>The 3 numbers or facts that, if the reader remembers nothing else, the infographic succeeded: ① __ ② __ ③ __</div>
-          <div className="cheat-item"><div className="cheat-key">5. NARRATIVE STRUCTURE</div>Hook (your wow stat): __ · Context: __ · Evidence: __ · Insight: __ · Source: __</div>
-          <div className="cheat-item"><div className="cheat-key">6. COLOR MOOD</div>☐ Bold/Energetic  ☐ Calm/Trust  ☐ Playful/Fun  ☐ Professional/Corporate  ☐ Dark/Premium</div>
-          <div className="cheat-item"><div className="cheat-key">7. PLATFORM OUTPUT</div>☐ Instagram (1:1 or 4:5) · ☐ Web/Blog (long vertical, 800px wide) · ☐ Print A4 · ☐ Presentation slide (16:9)</div>
-          <div className="cheat-item"><div className="cheat-key">8. ROUGH SKETCH SPACE</div>Draw your layout in boxes here before touching Canva. Title zone / Chart zone / Data zone / Insight zone / Source.</div>
-        </div>
-        <button className="print-btn" >🖨️ Print planning worksheet</button>
-      </div>
-
-      <div className="printable-card">
-        <div className="print-badge">🖨️ PRINTABLE — EXPORT REFERENCE</div>
-        <h3>📤 Complete Canva Export Guide — Every Format Explained</h3>
-        <div className="cheat-grid">
-          <div className="cheat-item"><div className="cheat-key">PNG — BEST FOR DIGITAL</div>Use for: websites, social media, email, presentations. Set quality to "High Quality." Supports transparency. Not ideal for small text — use PDF for print.</div>
-          <div className="cheat-item"><div className="cheat-key">PDF PRINT — BEST FOR PRINT</div>Use for: anything that will be physically printed. Vector elements stay crisp at any size. Always export "PDF Print" (not "PDF Standard") for professional printing.</div>
-          <div className="cheat-item"><div className="cheat-key">SVG — BEST FOR SCALING</div>Use for: logos, icons, elements you'll import into Illustrator. Infinitely scalable. Note: not all Canva elements export to SVG correctly — test before relying on it.</div>
-          <div className="cheat-item"><div className="cheat-key">MP4 — FOR ANIMATION</div>Use for: animated social media content, presentations with motion. Use Canva's animation feature on individual elements before exporting. 1080p resolution for Instagram Reels/Stories.</div>
-          <div className="cheat-item"><div className="cheat-key">RESOLUTION GUIDE</div>Web only: 72–96 DPI. Print small (brochure/postcard): 150 DPI. Print standard (A4, poster): 300 DPI. Large format (banner, billboard): 150 DPI is usually sufficient at viewing distance.</div>
-          <div className="cheat-item"><div className="cheat-key">SOCIAL MEDIA SIZES</div>Instagram Post: 1080×1080 · Story/Reel: 1080×1920 · LinkedIn: 1200×627 · Twitter/X: 1600×900 · Pinterest: 1000×1500 · Facebook: 1200×630</div>
-        </div>
-        <button className="print-btn" >🖨️ Print export guide</button>
-      </div>
-
-      <div className="case-study">
-        <div className="cs-label">📚 CASE STUDY — INFOGRAPHIC DONE RIGHT</div>
-        <h4>How Bloomberg redesigned financial data for human beings</h4>
-        <p>Bloomberg's data visualization team faced a classic challenge: their readers were educated professionals who understood data, but they were drowning in it. Spreadsheets, tables, and text-heavy reports were being skimmed or ignored entirely.</p>
-        <p>Their solution was to build an infographics team that treated every dataset as a story first. Before touching any visualization tool, designers asked: "What is the one thing we want someone to understand in 10 seconds?" That single insight became the visual anchor — a large number, a striking comparison, a dramatic geographic shift — and everything else became supporting context.</p>
-        <div className="cs-takeaway"><strong>The takeaway for your work:</strong> Ask the "10-second question" before you design. If someone looked at your finished infographic for 10 seconds and left, what would they remember? Design for that answer first.</div>
-      </div>
-
-      <div className="homework">
-        <h3>🏠 At-Home Tasks — Due Before Lesson 3</h3>
-        <div className="hw-task"><div className="hw-check" ></div><div><strong>Task 1 — The Big Build (60 min):</strong> Create a complete infographic using your Brand Kit from Lesson 1. Topic: "A Week in My Life" — use the statistical format to visualize how you spend your time. Apply the 5-part narrative structure: hook → context → evidence → insight → source. Must include at least one Canva chart and 4+ icons.</div></div>
-        <div className="hw-task"><div className="hw-check" ></div><div><strong>Task 2 — Export Experiment (20 min):</strong> Export your infographic in 4 formats: PNG (web quality), PNG (high quality), PDF Print, and MP4 with one animated element. Compare file sizes and visual quality. Which would you use for which context? Write a 5-sentence reflection.</div></div>
-        <div className="hw-task"><div className="hw-check" ></div><div><strong>Task 3 — Dream Project Planning (30 min):</strong> Use the Planning Worksheet above to plan your dream infographic — something you'd genuinely want to exist in the world. Sketch the layout on paper. Don't start designing yet — this comes in Lesson 3 and 4. Bring the completed worksheet to class.</div></div>
-        <div className="hw-task"><div className="hw-check" ></div><div><strong>Bonus 🌟 — Redesign Challenge:</strong> Find a bad infographic online (search "bad infographic" on Pinterest — there are many). Identify every design principle it violates. Then redesign it in Canva using your Brand Kit. The constraints: same data, better design. This is one of the most powerful exercises in design education.</div></div>
-      </div>
-    </div>
-  </>
+    </>
 );

@@ -10,54 +10,44 @@ export const Lesson1: React.FC = () => (
     <div className="lesson-panel active" id="panel-0">
       <div className="lesson-header l1-hd" data-emoji="📐">
         <div className="tag">CANVA</div> <div className="tag">FOUNDATIONS</div>
-        <h2>Lesson 1 — Design Foundations &amp; Canva Basics</h2>
-        <p>Master the universal principles of design that professionals use every day — before you touch a single tool. Understand how great design communicates, then apply it immediately in Canva.</p>
+        <h2>Lesson 1 — Design Foundations for Commercial/Print</h2>
+        <p>Master the universal principles of design that professionals use for packaging, direct mail, brochures, and marketing collateral. Understand how great commercial design drives buyer decisions, then apply it immediately in Canva.</p>
         <div className="lesson-meta">
           <div className="meta-chip">⏱ 2–2.5 hrs</div>
           <div className="meta-chip">🛠 Canva (free account)</div>
           <div className="meta-chip">🎯 No prior experience needed</div>
-          <div className="meta-chip">🖨️ 2 printables</div>
+          <div className="meta-chip">🖨️ Design Audit included</div>
         </div>
       </div>
 
       <div className="fun-fact">
         <div className="ff-icon">💡</div>
-        <div><strong>Why start with theory?</strong> 90% of beginners rush straight to tools and struggle — because they're making aesthetic decisions without a framework. Designers who understand <em>why</em> certain choices work can solve any visual problem, in any tool, forever. This lesson gives you that framework.</div>
+        <div><strong>The 3-5 Second Rule:</strong> In retail or mailbox environments, you have 3-5 seconds to capture attention. Your design must communicate brand value instantly through visual hierarchy, color, and typography — before conscious thought kicks in. This lesson teaches you to design for conversion.</div>
       </div>
 
       <div className="design-quote">
-        <blockquote>The life of a designer is a life of fight against the ugliness.</blockquote>
-        <cite>— Massimo Vignelli, Italian-American designer (NYC Subway map, American Airlines, Knoll furniture)</cite>
+        <blockquote>Design is the silent ambassador of your brand.</blockquote>
+        <cite>— Paul Rand, legendary brand identity designer</cite>
       </div>
 
       <div className="content-grid">
         <div className="card">
           <h3>🎯 What You'll Learn</h3>
           <ul className="obj-list">
-            <li><div className="obj-dot">✓</div>The 5 core design principles — CRAP + Visual Hierarchy — with real examples</li>
-            <li><div className="obj-dot">✓</div>Typography fundamentals: anatomy of type, choosing font pairs that work</li>
-            <li><div className="obj-dot">✓</div>Color theory: the color wheel, harmony rules, psychological effects of color</li>
-            <li><div className="obj-dot">✓</div>White space: why emptiness is your most powerful design element</li>
-            <li><div className="obj-dot">✓</div>Canva orientation: workspace, panels, the element library, Brand Kit</li>
-            <li><div className="obj-dot">✓</div>Grids, guides, alignment tools, and smart snapping</li>
-            <li><div className="obj-dot">✓</div>Build your first designed layout from scratch — a structured one-pager</li>
+            <li><div className="obj-dot">✓</div>The 5 core design principles adapted for commercial print design</li>
+            <li><div className="obj-dot">✓</div>Typography for print: font pairing, hierarchy, CMYK vs. RGB</li>
+            <li><div className="obj-dot">✓</div>Color theory for retail: psychological impact and brand positioning</li>
+            <li><div className="obj-dot">✓</div>Grid systems for packaging, brochures, and print collateral</li>
+            <li><div className="obj-dot">✓</div>Canva orientation and Brand Kit setup for professional work</li>
+            <li><div className="obj-dot">✓</div>Design principles in real commercial context (comparison cases)</li>
+            <li><div className="obj-dot">✓</div>Build your first branded design piece using all 5 principles</li>
           </ul>
         </div>
-        <div className="card">
-          <h3>⏱ Lesson 1 Timeline</h3>
-          <ul className="timeline">
-            <li><span className="tl-time">0–20 min</span> Ice-breaker: "Good Design / Bad Design" — analyze 6 real infographics as a group. What works? What doesn't? Why?</li>
-            <li><span className="tl-time">20–55 min</span> Theory deep-dive: CRAP principles + Hierarchy. Each principle shown with side-by-side before/after examples.</li>
-            <li><span className="tl-time">55–80 min</span> Canva orientation — live walkthrough of all panels, shortcuts, and the element library</li>
-            <li><span className="tl-time">80–115 min</span> Hands-on workshop: Build a "3-fact mini-infographic" using your provided topic card</li>
-            <li><span className="tl-time">115–130 min</span> Group critique round-table: each student presents, class gives one compliment + one improvement</li>
-            <li><span className="tl-time">130–140 min</span> Homework briefing + set up Canva Brand Kits together</li>
-          </ul>
-        </div>
+
       </div>
 
       <div className="card card-wide" style={{ marginBottom: '22px' }}>
-        <h3>📖 The 5 Design Principles — Click Each to Master It</h3>
+        <h3>📖 The 5 Design Principles for Commercial Design</h3>
 
         <div className="accordion">
           <div className="acc-header" >⚡ Contrast — The principle that creates life <span className="acc-arrow">▾</span></div>

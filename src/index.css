@@ -1,11 +1,11 @@
 :root {
-  --ink: #0f0e17;
+  --ink: #05193e;
   --cream: #fffbf2;
   --coral: #e8453c;
   --yellow: #f5c518;
   --mint: #2ec4a9;
   --lavender: #b8a4f5;
-  --blue: #1a56db;
+  --blue: #05193e;
   --soft-bg: #f3ede0;
   --border: #e0d8c8;
   --shadow: 4px 4px 0px var(--ink);
@@ -14,7 +14,7 @@
 *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
 
 body {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Poppins', 'DM Sans', sans-serif;
   background: var(--cream);
   color: var(--ink);
   overflow-x: hidden;
@@ -37,8 +37,24 @@ header {
   height: 62px;
   border-bottom: 3px solid var(--yellow);
 }
-.logo { font-family:'Fraunces',serif; font-weight:900; font-size:1.35rem; letter-spacing:-0.5px; }
-.logo span { color:var(--yellow); }
+.logo { 
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family:'Poppins',sans-serif; 
+  font-weight: 700; 
+  font-size: 1.1rem; 
+  letter-spacing: -0.5px;
+}
+.logo-img { 
+  height: 40px; 
+  width: auto; 
+  display: block;
+}
+.logo span { 
+  color: var(--cream);
+  font-weight: 600;
+}
 .nav-pills { display:flex; gap:6px; }
 .nav-pill {
   background:transparent; border:1.5px solid #3a3a3a; color:#999;
