@@ -1,15 +1,15 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { motion, AnimatePresence } from 'framer-motion';
+import type { CourseDay } from '../../types/presentation';
 
-// Cinematic Varients
+// Cinematic Variants
 const slideVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
     transition: {
-      // Controls the orchestration of child elements
       when: 'beforeChildren' as const,
       staggerChildren: 0.15,
       delayChildren: 0.1,
@@ -40,52 +40,26 @@ const listVariants = {
   }
 };
 
-// Map Markdown elements to Motion elements to achieve the consecutive step-by-step
-const CinematicComponents: any = {
-  h1: ({node, ...props}: any) => <motion.h1 variants={itemVariants} {...props} />,
-  h2: ({node, ...props}: any) => <motion.h2 variants={itemVariants} {...props} />,
-  h3: ({node, ...props}: any) => <motion.h3 variants={itemVariants} {...props} />,
-  p: ({node, ...props}: any) => <motion.p variants={itemVariants} {...props} />,
-  blockquote: ({node, ...props}: any) => <motion.blockquote variants={itemVariants} {...props} />,
-  ul: ({node, ...props}: any) => <motion.ul variants={listVariants} {...props} />,
-  ol: ({node, ...props}: any) => <motion.ol variants={listVariants} {...props} />,
-  li: ({node, ...props}: any) => <motion.li variants={itemVariants} {...props} />,
-  table: ({node, ...props}: any) => (
-    <motion.div variants={itemVariants} style={{ width: '100%', overflowX: 'auto' }}>
-      <table {...props} />
-    </motion.div>
-  ),
-  img: ({node, ...props}: any) => <motion.img variants={itemVariants} {...props} />,
-};
-
 type Props = {
-  markdownUrl: string;
-  title: string;
+  courseData: CourseDay;
   onExit?: () => void;
 };
 
-export const CinematicSlider = ({ markdownUrl, title, onExit }: Props) => {
-  const [slides, setSlides] = useState<string[]>([]);
+// Markdown component wrapper to avoid strict <p> nesting rules 
+const Mkdwn = ({ children, isInline = true }: { children: string, isInline?: boolean }) => {
+  return (
+    <ReactMarkdown 
+      components={isInline ? { p: React.Fragment } : undefined}
+      remarkPlugins={[remarkGfm]}
+    >
+      {children}
+    </ReactMarkdown>
+  );
+};
+
+export const CinematicSlider = ({ courseData, onExit }: Props) => {
+  const slides = courseData.slides;
   const [currentIndex, setCurrentIndex] = useState(0);
-
-  useEffect(() => {
-    fetch(markdownUrl)
-      .then((res) => res.text())
-      .then((text) => {
-        // Strip emojis to comply with "remove emojis"
-        const noEmojis = text.replace(/[\u{1F300}-\u{1F9FF}\u{2600}-\u{26FF}\u{2700}-\u{27BF}\u{1F600}-\u{1F64F}\u{1F680}-\u{1F6FF}]/gu, '');
-        
-        // Split precisely via Horizontal rule
-        const validSlides = noEmojis
-          .split(/\n\s*---\s*\n/)
-          .map((p) => p.trim())
-          .filter((p) => p.length > 0 && p !== '---');
-
-        setSlides(validSlides);
-        setCurrentIndex(0);
-      })
-      .catch(console.error);
-  }, [markdownUrl]);
 
   // Key navigation
   useEffect(() => {
@@ -116,11 +90,13 @@ export const CinematicSlider = ({ markdownUrl, title, onExit }: Props) => {
     }
   };
 
-  if (slides.length === 0) {
-    return <div className="loading-state">جاري تجهيز العرض السينمائي...</div>;
+  if (!slides || slides.length === 0) {
+    return <div className="loading-state">لا يوجد محتوى للعرض...</div>;
   }
 
+  const currentSlide = slides[currentIndex];
   const progressPercent = ((currentIndex + 1) / slides.length) * 100;
+  const hasImages = currentSlide.images && currentSlide.images.length > 0;
 
   return (
     <div className="presentation-fullscreen cinematic-mode">
@@ -132,31 +108,116 @@ export const CinematicSlider = ({ markdownUrl, title, onExit }: Props) => {
 
       {/* Cinematic Micro Progress Bar */}
       <div className="cinematic-progress-bar-container">
-        <div className="cinematic-progress-bar" style={{ width: `${progressPercent}%` }} />
+        <div className="cinematic-progress-bar" style={{ width: progressPercent + '%' }} />
       </div>
 
       <div className="slideshow-header-cinematic">
         <div className="slideshow-meta-cinematic">
-          {title} &nbsp;&mdash;&nbsp; {currentIndex + 1} / {slides.length}
+          {courseData.title} &nbsp;&mdash;&nbsp; {currentIndex + 1} / {slides.length}
         </div>
       </div>
       
-      <div className="slide-content-area-cinematic">
+      <div className="slide-content-area-cinematic" style={{ padding: '4rem 6rem' }}>
         <AnimatePresence mode="wait">
           <motion.div
-            key={currentIndex}
-            className={`cinematic-slide-inner ${slides[currentIndex].includes('![') ? 'has-image' : ''}`}
+            key={currentSlide.id}
+            className={'cinematic-slide-inner ' + (hasImages ? 'has-image' : '')}
             variants={slideVariants}
             initial="hidden"
             animate="visible"
             exit="exit"
+            style={
+              hasImages
+                ? { 
+                    display: 'grid', 
+                    gridTemplateColumns: 'minmax(300px, 40%) 1fr', 
+                    gap: '4rem', 
+                    alignItems: 'center',
+                    height: '100%'
+                  }
+                : { height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center' }
+            }
           >
-            <ReactMarkdown
-              components={CinematicComponents}
-              remarkPlugins={[remarkGfm]}
+            {/* LEFT COLUMN: IMAGES */}
+            {hasImages && (
+              <div 
+                className="slide-image-column" 
+                style={{ 
+                  display: 'flex', 
+                  flexDirection: 'column', 
+                  gap: '1.5rem',
+                  maxHeight: '100%',
+                }}
+              >
+                {currentSlide.images.map((img, i) => (
+                  <motion.img 
+                    key={i} 
+                    src={img} 
+                    variants={itemVariants} 
+                    alt="مرافق للعرض" 
+                    style={{ 
+                      width: '100%', 
+                      height: 'auto',
+                      maxHeight: 'calc(' + (100 / currentSlide.images.length) + '% - 1rem)',
+                      objectFit: 'contain', 
+                      borderRadius: '16px', 
+                      boxShadow: '0 20px 40px rgba(0,0,0,0.4)',
+                      background: 'rgba(255,255,255,0.02)'
+                    }} 
+                  />
+                ))}
+              </div>
+            )}
+
+            {/* RIGHT COLUMN: TEXT (or full width if no images) */}
+            <div 
+              className="slide-text-column" 
+              style={{ 
+                display: 'flex', 
+                flexDirection: 'column', 
+                gap: '2rem', 
+                justifyContent: 'center',
+                maxHeight: '100%'
+              }}
             >
-              {slides[currentIndex]}
-            </ReactMarkdown>
+              {currentSlide.sections.map((section, sIdx) => (
+                <div key={sIdx} className="slide-section" style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+                  {section.elements.map((element, eIdx) => {
+                    if (element.type === 'h1') return <motion.h1 key={eIdx} variants={itemVariants}><Mkdwn>{(element as any).text}</Mkdwn></motion.h1>;
+                    if (element.type === 'h2') return <motion.h2 key={eIdx} variants={itemVariants}><Mkdwn>{(element as any).text}</Mkdwn></motion.h2>;
+                    if (element.type === 'h3') return <motion.h3 key={eIdx} variants={itemVariants}><Mkdwn>{(element as any).text}</Mkdwn></motion.h3>;
+                    if (element.type === 'blockquote') return <motion.blockquote key={eIdx} variants={itemVariants}><Mkdwn>{(element as any).text}</Mkdwn></motion.blockquote>;
+                    
+                    if (element.type === 'ul') return (
+                      <motion.ul key={eIdx} variants={listVariants}>
+                        {(element as any).items.map((item: string, i: number) => (
+                          <motion.li key={i} variants={itemVariants}><Mkdwn>{item}</Mkdwn></motion.li>
+                        ))}
+                      </motion.ul>
+                    );
+                    
+                    if (element.type === 'ol') return (
+                      <motion.ol key={eIdx} variants={listVariants}>
+                        {(element as any).items.map((item: string, i: number) => (
+                          <motion.li key={i} variants={itemVariants}><Mkdwn>{item}</Mkdwn></motion.li>
+                        ))}
+                      </motion.ol>
+                    );
+
+                    if (element.type === 'table') return (
+                       <motion.div key={eIdx} variants={itemVariants} style={{ width: '100%', overflowX: 'auto' }}>
+                            <Mkdwn isInline={false}>{(element as any).text}</Mkdwn>
+                       </motion.div>
+                    );
+
+                    // default to p
+                    if ((element as any).text === '---') return <motion.hr key={eIdx} variants={itemVariants} />;
+
+                    return <motion.p key={eIdx} variants={itemVariants}><Mkdwn>{(element as any).text}</Mkdwn></motion.p>;
+                  })}
+                </div>
+              ))}
+            </div>
           </motion.div>
         </AnimatePresence>
       </div>
