@@ -1,29 +1,30 @@
-
-
 import { useState } from 'react';
 import './App.css';
-import { Header } from './components/atomic/Header';
-import { Hero } from './components/atomic/Hero';
-import { Footer } from './components/atomic/Footer';
-
-import { Overview } from './components/sections/Overview';
-import { Lessons } from './components/sections/Lessons';
-import { Resources } from './components/sections/Resources';
+import { LandingPage } from './components/sections/LandingPage';
+import { Day1 } from './components/sections/Day1';
+import { Day2 } from './components/sections/Day2';
+import { Day3 } from './components/sections/Day3';
+import { Day4 } from './components/sections/Day4';
 
 function App() {
-  const [section, setSection] = useState('overview');
+  const [currentPage, setCurrentPage] = useState('home');
+
+  const onExit = () => setCurrentPage('home');
+
+  const handleStart = (dayNumber: number) => {
+    setCurrentPage(`day${dayNumber}`);
+  };
 
   return (
-    <>
-      <Header activeSection={section} onNav={setSection} />
+    <div className="presentation-app">
       <main>
-        <Hero />
-        {section === 'overview' && <Overview />}
-        {section === 'lessons' && <Lessons />}
-        {section === 'resources' && <Resources />}
+        {currentPage === 'home' && <LandingPage onStart={handleStart} />}
+        {currentPage === 'day1' && <Day1 onExit={onExit} />}
+        {currentPage === 'day2' && <Day2 onExit={onExit} />}
+        {currentPage === 'day3' && <Day3 onExit={onExit} />}
+        {currentPage === 'day4' && <Day4 onExit={onExit} />}
       </main>
-      <Footer />
-    </>
+    </div>
   );
 }
 

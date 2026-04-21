@@ -1,32 +1,48 @@
-import React from 'react';
+type HeaderProps = {
+  activePage: string;
+  onNav: (page: string) => void;
+};
 
-interface HeaderProps {
-    activeSection: string;
-    onNav: (section: string) => void;
-}
-
-const navItems = [
-    { id: 'overview', label: 'Overview' },
-    { id: 'lessons', label: 'Lessons' },
-    { id: 'resources', label: 'Resources' },
-];
-
-export const Header: React.FC<HeaderProps> = ({ activeSection, onNav }) => (
+export const Header = ({ activePage, onNav }: HeaderProps) => {
+  return (
     <header className="header">
-        <div className="logo">
-            <img src="/evol-logo.svg" alt="EVOL" className="logo-img" />
-            <span>Commercial Design</span>
+      <div className="container header-inner">
+        <div className="logo" onClick={() => onNav('home')}>
+          دورة التصميم <span>المكثفة</span>
         </div>
-        <nav className="nav-pills">
-            {navItems.map(item => (
-                <button
-                    key={item.id}
-                    className={`nav-pill${activeSection === item.id ? ' active' : ''}`}
-                    onClick={() => onNav(item.id)}
-                >
-                    {item.label}
-                </button>
-            ))}
+        <nav className="nav-links">
+          <button 
+            className={`nav-link ${activePage === 'home' ? 'active' : ''}`}
+            onClick={() => onNav('home')}
+          >
+            الرئيسية
+          </button>
+          <button 
+            className={`nav-link ${activePage === 'day1' ? 'active' : ''}`}
+            onClick={() => onNav('day1')}
+          >
+            اليوم الأول
+          </button>
+          <button 
+            className={`nav-link ${activePage === 'day2' ? 'active' : ''}`}
+            onClick={() => onNav('day2')}
+          >
+            اليوم الثاني
+          </button>
+          <button 
+            className={`nav-link ${activePage === 'day3' ? 'active' : ''}`}
+            onClick={() => onNav('day3')}
+          >
+            اليوم الثالث
+          </button>
+          <button 
+            className={`nav-link ${activePage === 'day4' ? 'active' : ''}`}
+            onClick={() => onNav('day4')}
+          >
+            اليوم الرابع
+          </button>
         </nav>
+      </div>
     </header>
-);
+  );
+};
