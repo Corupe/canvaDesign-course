@@ -17,7 +17,7 @@ const slideVariants = {
       ease: 'easeOut' as const,
     },
   },
-  exit: { 
+  exit: {
     opacity: 0,
     transition: { duration: 0.3, ease: 'easeIn' as const }
   },
@@ -25,10 +25,10 @@ const slideVariants = {
 
 const itemVariants = {
   hidden: { opacity: 0, y: 30 },
-  visible: { 
-    opacity: 1, 
-    y: 0, 
-    transition: { type: 'spring' as const, stiffness: 100, damping: 20 } 
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { type: 'spring' as const, stiffness: 100, damping: 20 }
   },
 };
 
@@ -48,7 +48,7 @@ type Props = {
 // Markdown component wrapper to avoid strict <p> nesting rules 
 const Mkdwn = ({ children, isInline = true }: { children: string, isInline?: boolean }) => {
   return (
-    <ReactMarkdown 
+    <ReactMarkdown
       components={isInline ? { p: React.Fragment } : undefined}
       remarkPlugins={[remarkGfm]}
     >
@@ -116,8 +116,8 @@ export const CinematicSlider = ({ courseData, onExit }: Props) => {
           {courseData.title} &nbsp;&mdash;&nbsp; {currentIndex + 1} / {slides.length}
         </div>
       </div>
-      
-      <div className="slide-content-area-cinematic" style={{ padding: '4rem 6rem' }}>
+
+      <div className="slide-content-area-cinematic " style={{ padding: 'clamp(2rem, 4vw, 4rem) clamp(3rem, 6vw, 6rem)' }}>
         <AnimatePresence mode="wait">
           <motion.div
             key={currentSlide.id}
@@ -128,54 +128,54 @@ export const CinematicSlider = ({ courseData, onExit }: Props) => {
             exit="exit"
             style={
               hasImages
-                ? { 
-                    display: 'grid', 
-                    gridTemplateColumns: 'minmax(300px, 40%) 1fr', 
-                    gap: '4rem', 
-                    alignItems: 'center',
-                    height: '100%'
-                  }
+                ? {
+                  display: 'grid',
+                  gridTemplateColumns: 'minmax(300px, 40%) 1fr',
+                  gap: '4rem',
+                  alignItems: 'center',
+                  height: '100%'
+                }
                 : { height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center' }
             }
           >
             {/* LEFT COLUMN: IMAGES */}
             {hasImages && (
-              <div 
-                className="slide-image-column" 
-                style={{ 
-                  display: 'flex', 
-                  flexDirection: 'column', 
+              <div
+                className="slide-image-column"
+                style={{
+                  display: 'flex',
+                  flexDirection: 'row',
                   gap: '1.5rem',
                   maxHeight: '100%',
                 }}
               >
                 {currentSlide.images.map((img, i) => (
-                  <motion.img 
-                    key={i} 
-                    src={img} 
-                    variants={itemVariants} 
-                    alt="مرافق للعرض" 
-                    style={{ 
-                      width: '100%', 
+                  <motion.img
+                    key={i}
+                    src={img}
+                    variants={itemVariants}
+                    alt="مرافق للعرض"
+                    style={{
+                      width: '100%',
                       height: 'auto',
                       maxHeight: 'calc(' + (100 / currentSlide.images.length) + '% - 1rem)',
-                      objectFit: 'contain', 
-                      borderRadius: '16px', 
+                      objectFit: 'contain',
+                      borderRadius: '16px',
                       boxShadow: '0 20px 40px rgba(0,0,0,0.4)',
                       background: 'rgba(255,255,255,0.02)'
-                    }} 
+                    }}
                   />
                 ))}
               </div>
             )}
 
             {/* RIGHT COLUMN: TEXT (or full width if no images) */}
-            <div 
-              className="slide-text-column" 
-              style={{ 
-                display: 'flex', 
-                flexDirection: 'column', 
-                gap: '2rem', 
+            <div
+              className="slide-text-column"
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '2rem',
                 justifyContent: 'center',
                 maxHeight: '100%'
               }}
@@ -187,7 +187,7 @@ export const CinematicSlider = ({ courseData, onExit }: Props) => {
                     if (element.type === 'h2') return <motion.h2 key={eIdx} variants={itemVariants}><Mkdwn>{(element as any).text}</Mkdwn></motion.h2>;
                     if (element.type === 'h3') return <motion.h3 key={eIdx} variants={itemVariants}><Mkdwn>{(element as any).text}</Mkdwn></motion.h3>;
                     if (element.type === 'blockquote') return <motion.blockquote key={eIdx} variants={itemVariants}><Mkdwn>{(element as any).text}</Mkdwn></motion.blockquote>;
-                    
+
                     if (element.type === 'ul') return (
                       <motion.ul key={eIdx} variants={listVariants}>
                         {(element as any).items.map((item: string, i: number) => (
@@ -195,7 +195,7 @@ export const CinematicSlider = ({ courseData, onExit }: Props) => {
                         ))}
                       </motion.ul>
                     );
-                    
+
                     if (element.type === 'ol') return (
                       <motion.ol key={eIdx} variants={listVariants}>
                         {(element as any).items.map((item: string, i: number) => (
@@ -205,9 +205,9 @@ export const CinematicSlider = ({ courseData, onExit }: Props) => {
                     );
 
                     if (element.type === 'table') return (
-                       <motion.div key={eIdx} variants={itemVariants} style={{ width: '100%', overflowX: 'auto' }}>
-                            <Mkdwn isInline={false}>{(element as any).text}</Mkdwn>
-                       </motion.div>
+                      <motion.div key={eIdx} variants={itemVariants} style={{ width: '100%', overflowX: 'auto' }}>
+                        <Mkdwn isInline={false}>{(element as any).text}</Mkdwn>
+                      </motion.div>
                     );
 
                     // default to p
@@ -224,16 +224,16 @@ export const CinematicSlider = ({ courseData, onExit }: Props) => {
 
       {/* Embedded Controls */}
       <div className="slideshow-controls-floating">
-        <button 
-          className="btn-arrow" 
-          onClick={nextAction} 
+        <button
+          className="btn-arrow"
+          onClick={nextAction}
           disabled={currentIndex === slides.length - 1}
         >
           ❯
         </button>
-        <button 
-          className="btn-arrow" 
-          onClick={prevAction} 
+        <button
+          className="btn-arrow"
+          onClick={prevAction}
           disabled={currentIndex === 0}
         >
           ❮
